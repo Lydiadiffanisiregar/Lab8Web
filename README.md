@@ -50,7 +50,7 @@ VALUES ('Elektronik', 'HP Samsung Android', 'hp_samsung.jpg', 2000000, 2400000, 
 ('Elektronik', 'HP OPPO Android', 'hp_oppo.jpg', 1800000, 2300000, 5);``` 
 
 Letakkan format di SQL atau Konsol, saat ini saya meletakkan di SQL
-![foto](foto/foto8.PNG)
+![foto](foto/foto9.PNG)
 
 Inilah hasil formatnya
-![foto](foto/foto9.PNG)
+![foto](foto/foto10.PNG)
