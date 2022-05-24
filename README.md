@@ -1,4 +1,4 @@
-Praktikum 8: PHP dan Database MySQL
+## Praktikum 8: PHP dan Database MySQL
 Repository ini dibuat untuk memenuhi tugas Pemrograman Web
 | Nama      | Lydia Diffani Siregar |
 | ----------- | ----------- |
@@ -58,14 +58,80 @@ Inilah hasil formatnya
 ![foto](foto/foto10.PNG)
 
 Membuat Program CRUD
-Buat folder lab8_php_database pada root directory web server (c:\xampp\htdocs)
-![foto](foto/foto.PNG)
+Saya akan membuat folder baru directory web server (d:\xampp\htdocs) dengan nama lab8_php_database
+![foto](foto/foto11.PNG)
 
-Kemudian untuk mengakses direktory tersebut pada web server dengan mengakses URL: http://locallhost/lab8_php_database/
-Buka melalui browser untuk menguji koneksi database (untuk menyampaikan pesan koneksi berhasil, uncomment pada perintah echo "koneksi berhasil";)
+Kemudian untuk mengakses direktory tersebut pada web server dengan mengakses URL: http://localhost/lab8_php_database/
+![foto](foto/foto12.PNG)
 
-Membuat File Koneksi Database
-Buat file baru dengan nama koneksi.php
+Membuat file koneksi database
+Buat file baru di VSC dengan nama koneksi.php dengan format
+```php <?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "latihan1";
+$conn = mysqli_connect($host, $user, $pass, $db);
+if ($conn == false)
+{
+echo "Koneksi ke server gagal.";
+die();
+} #else echo "Koneksi berhasil";
+?>
+```
 
+Buka melalui browser untuk menguji koneksi database (untuk menyampilkan pesan koneksi berhasil, uncomment pada perintah echo “koneksi berhasil”;
+![foto](foto/foto13.PNG)
 
-Buka melalui browser untuk menguji koneksi database (untuk menyampaikan pesan koneksi berhasil, uncomment pada perintah echo "koneksi berhasil";)
+Membuat file index untuk menampilkan data (Read)
+Buat file baru dengan nama index.php dengan format:
+```php <?php
+include("koneksi.php");
+// query untuk menampilkan data
+$sql = 'SELECT * FROM data_barang';
+$result = mysqli_query($conn, $sql);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+<title>Data Barang</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Barang</h1>
+        <div class="main">
+            <table>
+            <tr>
+                <th>Gambar</th>
+                <th>Nama Barang</th>
+                <th>Katagori</th>
+                <th>Harga Jual</th>
+                <th>Harga Beli</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+            </tr>
+            <?php if($result): ?>
+            <?php while($row = mysqli_fetch_array($result)): ?>
+            <tr>
+                <td><img src="gambar<?= $row['gambar'];?>" alt="<?=
+$row['nama'];?>"></td>
+                <td><?= $row['nama'];?></td>
+                <td><?= $row['kategori'];?></td>
+                <td><?= $row['harga_beli'];?></td>
+                <td><?= $row['harga_jual'];?></td>
+                <td><?= $row['stok'];?></td>
+                <td><?= $row['id_barang'];?></td>
+            </tr>
+            <?php endwhile; else: ?>
+            <tr>
+                <td colspan="7">Belum ada data</td>
+            </tr>
+            <?php endif; ?>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+```
