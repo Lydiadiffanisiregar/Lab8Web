@@ -34,7 +34,8 @@ gambar varchar(100),
 harga_beli decimal(10,0),
 harga_jual decimal(10,0),
 stok int(4)
-);```
+);
+```
 
 format dapat diletakkan di konsol atau SQL
 Ini tampilan di Konsol:
@@ -47,10 +48,24 @@ Kemudian menambahkan Data dengan format :
 ```php INSERT INTO data_barang (kategori, nama, gambar, harga_beli, harga_jual, stok)
 VALUES ('Elektronik', 'HP Samsung Android', 'hp_samsung.jpg', 2000000, 2400000, 5),
 ('Elektronik', 'HP Xiaomi Android', 'hp_xiaomi.jpg', 1000000, 1400000, 5),
-('Elektronik', 'HP OPPO Android', 'hp_oppo.jpg', 1800000, 2300000, 5);``` 
+('Elektronik', 'HP OPPO Android', 'hp_oppo.jpg', 1800000, 2300000, 5);
+``` 
 
 Letakkan format di SQL atau Konsol, saat ini saya meletakkan di SQL
 ![foto](foto/foto9.PNG)
 
 Inilah hasil formatnya
 ![foto](foto/foto10.PNG)
+
+Membuat Program CRUD
+Buat folder lab8_php_database pada root directory web server (c:\xampp\htdocs)
+![foto](foto/foto.PNG)
+
+Kemudian untuk mengakses direktory tersebut pada web server dengan mengakses URL: http://locallhost/lab8_php_database/
+Buka melalui browser untuk menguji koneksi database (untuk menyampaikan pesan koneksi berhasil, uncomment pada perintah echo "koneksi berhasil";)
+
+Membuat File Koneksi Database
+Buat file baru dengan nama koneksi.php
+
+
+Buka melalui browser untuk menguji koneksi database (untuk menyampaikan pesan koneksi berhasil, uncomment pada perintah echo "koneksi berhasil";)
