@@ -45,7 +45,8 @@ Ini Tampilan di SQL:
 ![foto](foto/foto7.PNG)
 
 Kemudian menambahkan Data dengan format :
-```php INSERT INTO data_barang (kategori, nama, gambar, harga_beli, harga_jual, stok)
+```php
+INSERT INTO data_barang (kategori, nama, gambar, harga_beli, harga_jual, stok)
 VALUES ('Elektronik', 'HP Samsung Android', 'hp_samsung.jpg', 2000000, 2400000, 5),
 ('Elektronik', 'HP Xiaomi Android', 'hp_xiaomi.jpg', 1000000, 1400000, 5),
 ('Elektronik', 'HP OPPO Android', 'hp_oppo.jpg', 1800000, 2300000, 5);
