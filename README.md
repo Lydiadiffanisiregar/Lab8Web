@@ -58,7 +58,7 @@ Letakkan format di SQL atau Konsol, saat ini saya meletakkan di SQL
 Inilah hasil formatnya
 ![foto](foto/foto10.PNG)
 
-Membuat Program CRUD
+## Membuat Program CRUD
 Saya akan membuat folder baru directory web server (d:\xampp\htdocs) dengan nama lab8_php_database
 ![foto](foto/foto11.PNG)
 
@@ -67,7 +67,8 @@ Kemudian untuk mengakses direktory tersebut pada web server dengan mengakses URL
 
 Membuat file koneksi database
 Buat file baru di VSC dengan nama koneksi.php dengan format
-```php <?php
+```php
+<?php
 $host = "localhost";
 $user = "root";
 $pass = "";
